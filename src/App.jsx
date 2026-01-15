@@ -9,28 +9,29 @@ import {
 } from 'lucide-react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-// --- CONTEÚDO ---
+// --- CONTEÚDO ATUALIZADO ---
 const content = {
   pt: {
     hero: {
-      role: 'Developer & AI Enthusiast',
+      role: 'Developer & AI Enthusiast', // Alterado para "Developer"
       title: 'Código com Alma & Lógica',
-      subtitle: 'Desenvolvedora apaixonada por arquitetura de software, automação e inteligência artificial. Transformo regras de negócio complexas em sistemas elegantes e eficientes.',
+      subtitle: 'Desenvolvedora apaixonada por arquitetura de software, automação e inteligência artificial. Transformo regras de negócio complexas em sistemas elegantes e escaláveis.',
       location: 'Sorocaba, SP',
       btnProject: 'Ver Portfolio',
       btnContact: 'Entrar em Contato'
     },
     about: {
       title: 'A Arquiteta por trás do Código',
-      desc1: 'Minha jornada técnica combina a precisão do desenvolvimento Back-end com a criatividade da Inteligência Artificial. Atualmente cursando Análise e Desenvolvimento de Sistemas na UNISO.',
-      desc2: 'Tenho experiência prática na criação de sistemas desktop robustos (Python/SQL) e agentes de IA modernos (Groq API). Meu foco é entregar performance sem sacrificar a estética do código.',
+      // Texto atualizado para incluir Front-end
+      desc1: 'Minha jornada técnica une a robustez do desenvolvimento Back-end com a versatilidade do Front-end e a inovação da Inteligência Artificial. Atualmente cursando Análise e Desenvolvimento de Sistemas na UNISO.',
+      desc2: 'Tenho experiência prática na criação de sistemas desktop (Python/SQL) e aplicações web modernas. Meu foco é construir soluções completas, integrando APIs de IA com interfaces responsivas e intuitivas.',
       skillsTitle: 'Arsenal Técnico & Humano'
     },
     skills: {
       cat1: 'Back-end & Arquitetura',
       cat2: 'Banco de Dados',
       cat3: 'DevOps & Ferramentas',
-      cat4: 'Frontend & UI',
+      cat4: 'Frontend & UI', // Adicionado ao arsenal
       cat5: 'Soft Skills (Interpessoais)'
     },
     projects: {
@@ -42,24 +43,21 @@ const content = {
       btnLive: 'Testar Online',
       btnLegacy: 'Projeto Concluído (2024)',
       
-      // Projeto 1: Belle Time
       p1_title: 'Belle Time - Studio System',
-      p1_desc: 'Sistema de gestão completo para salões de beleza (Studio Ella’s). Gerencia agendamentos complexos, base de clientes e fluxo financeiro com integridade de dados rigorosa.',
+      p1_desc: 'Sistema de gestão completo para salões de beleza. Gerencia agendamentos, base de clientes e fluxo financeiro com integridade de dados rigorosa.',
       p1_tech: ['Python', 'MySQL', 'PySide6', 'VirtualBox'],
       p1_role: 'Full System Architecture',
       p1_repo: 'https://github.com/isabelladosanjos/BelleTime_Agenda',
       
-      // Projeto 2: Symphony IA
       p2_title: 'Symphony IA - Music Agent',
-      p2_desc: 'Agente inteligente que analisa sentimentos do usuário via processamento de linguagem natural e recomenda playlists musicais personalizadas utilizando a API do Groq.',
+      p2_desc: 'Agente inteligente que analisa sentimentos via PLN e recomenda playlists musicais personalizadas utilizando a API do Groq.',
       p2_tech: ['Python', 'Groq API', 'Streamlit', 'LLM Engineering'],
       p2_role: 'AI Implementation',
       p2_repo: 'https://github.com/isabelladosanjos/SymphonyIA_ProjetoADS',
       p2_live: 'https://symphonyiaprojetoads-5dfiru6tjoubjst8kvsabn.streamlit.app/',
 
-      // Projeto 3: Robson Pinturas (NOVO)
       p3_title: 'Robson Pinturas - Digital Presence',
-      p3_desc: 'Liderança técnica no desenvolvimento de uma plataforma mobile-first. Implementação de WhatsApp Business API para conversão de leads e Google OAuth para segurança.',
+      p3_desc: 'Liderança técnica no desenvolvimento de uma plataforma mobile-first. Implementação de WhatsApp Business API e Google OAuth.',
       p3_tech: ['JavaScript', 'Bootstrap', 'WhatsApp API', 'OAuth 2.0'],
       p3_role: 'Tech Lead & Full Front-End',
     },
@@ -68,22 +66,20 @@ const content = {
       desc: 'Preencha o formulário abaixo. A mensagem chegará diretamente no meu e-mail profissional.',
       btn: 'Enviar Mensagem',
       sending: 'Enviando...',
-      success: 'Mensagem enviada com sucesso! Entrarei em contato em breve.',
-      error: 'Houve um erro ao enviar. Tente novamente ou me chame no LinkedIn.',
+      success: 'Mensagem enviada com sucesso!',
+      error: 'Houve um erro ao enviar.',
       placeholderName: 'Seu Nome',
       placeholderEmail: 'Seu E-mail',
       placeholderMsg: 'Sua Mensagem'
     },
     footer: {
       tagline: 'Construindo o futuro, uma linha de código por vez.',
-      links: 'Navegação',
-      social: 'Conexão',
       copy: '© 2026 Isabella Dos Anjos. Todos os direitos reservados.'
     }
   },
   en: {
     hero: {
-      role: 'Back-end Developer & AI Enthusiast',
+      role: 'Developer & AI Enthusiast',
       title: 'Code with Soul & Logic',
       subtitle: 'Developer passionate about software architecture, automation, and artificial intelligence.',
       location: 'Sorocaba, Brazil',
@@ -92,13 +88,14 @@ const content = {
     },
     about: {
       title: 'The Architect Behind the Code',
-      desc1: 'My technical journey combines Back-end precision with AI creativity. Currently studying ADS at UNISO.',
-      desc2: 'I have practical experience building robust desktop systems (Python/SQL) and modern AI agents (Groq API).',
+      desc1: 'My technical journey bridges robust Back-end development with Front-end versatility and AI innovation. Currently studying ADS at UNISO.',
+      desc2: 'I have practical experience building desktop systems (Python/SQL) and modern web applications. My focus is delivering full-stack solutions with AI integration.',
       skillsTitle: 'Technical & Human Arsenal'
     },
     skills: {
       cat1: 'Back-end & Architecture',
       cat2: 'Database',
+      cat4: 'Frontend & UI',
       cat5: 'Soft Skills'
     },
     projects: {
@@ -110,16 +107,15 @@ const content = {
       btnLive: 'Live Demo',
       btnLegacy: 'Completed Project (2024)',
       p1_title: 'Belle Time - Studio System',
-      p1_desc: 'Complete management system for beauty salons. Handles complex scheduling and financial flow.',
+      p1_desc: 'Complete management system for beauty salons.',
       p1_tech: ['Python', 'MySQL', 'PySide6', 'VirtualBox'],
       p1_role: 'Full System Architecture',
       p2_title: 'Symphony IA - Music Agent',
-      p2_desc: 'Intelligent agent that recommends music based on user sentiment via NLP.',
+      p2_desc: 'Intelligent agent that recommends music based on user sentiment.',
       p2_tech: ['Python', 'Groq API', 'Streamlit', 'LLM Engineering'],
       p2_role: 'AI Implementation',
-      // Projeto 3 EN
       p3_title: 'Robson Pinturas - Digital Presence',
-      p3_desc: 'Technical leadership for a mobile-first platform. Integrated WhatsApp API and Google OAuth.',
+      p3_desc: 'Technical leadership for a mobile-first platform.',
       p3_tech: ['JavaScript', 'Bootstrap', 'WhatsApp API', 'OAuth 2.0'],
       p3_role: 'Tech Lead & Full Front-End',
     },
@@ -136,8 +132,6 @@ const content = {
     },
     footer: {
       tagline: 'Building the future, one line of code at a time.',
-      links: 'Navigation',
-      social: 'Connect',
       copy: '© 2026 Isabella Dos Anjos. All rights reserved.'
     }
   }
@@ -271,7 +265,16 @@ const App = () => {
       background: rgba(128, 128, 128, 0.1);
       border: 1px solid var(--border);
       color: var(--text-muted);
+      margin-right: 5px;
+      margin-bottom: 5px;
     }
+
+    .skill-category {
+      border-left: 2px solid var(--border);
+      padding-left: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
     .text-accent { color: var(--accent) !important; }
     .text-muted-custom { color: var(--text-muted) !important; }
     .font-code { font-family: var(--font-code); }
@@ -318,6 +321,47 @@ const App = () => {
         </div>
       </section>
 
+      {/* --- ABOUT & SKILLS --- */}
+      <section id="about" className="py-5">
+        <div className="container py-5">
+          <div className="row g-5">
+            <div className="col-lg-6">
+              <h2 className="mb-5 display-5 font-display">{t.about.title}</h2>
+              <p className="text-muted-custom mb-4" style={{fontSize: '1.15rem', lineHeight: '1.9'}}>{t.about.desc1}</p>
+              <p className="text-muted-custom" style={{fontSize: '1.15rem', lineHeight: '1.9'}}>{t.about.desc2}</p>
+            </div>
+            
+            <div className="col-lg-5 offset-lg-1">
+              <h3 className="h5 mb-5 font-code text-accent">&lt; {t.about.skillsTitle} /&gt;</h3>
+              
+              {/* Back-end */}
+              <div className="skill-category">
+                <h4 className="h6 mb-3 d-flex align-items-center gap-2"><Server size={18} className="text-accent"/> {t.skills.cat1}</h4>
+                <div className="d-flex flex-wrap">
+                  {['Python', 'Node.js', 'API REST', 'MVC', 'Security'].map(s => <span key={s} className="skill-badge">{s}</span>)}
+                </div>
+              </div>
+
+              {/* Front-end (NOVO) */}
+              <div className="skill-category">
+                <h4 className="h6 mb-3 d-flex align-items-center gap-2"><Layout size={18} className="text-accent"/> {t.skills.cat4}</h4>
+                <div className="d-flex flex-wrap">
+                  {['React.js', 'JavaScript', 'HTML5/CSS3', 'Bootstrap', 'UI/UX'].map(s => <span key={s} className="skill-badge">{s}</span>)}
+                </div>
+              </div>
+
+              {/* Soft Skills */}
+              <div className="skill-category">
+                <h4 className="h6 mb-3 d-flex align-items-center gap-2"><Users size={18} className="text-accent"/> {t.skills.cat5}</h4>
+                <div className="d-flex flex-wrap">
+                  {softSkillsList.map(s => <span key={s} className="skill-badge">{s}</span>)}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* --- PROJECTS --- */}
       <section id="projects" className="py-5" style={{background: 'linear-gradient(to bottom, var(--bg-body), var(--bg-card))'}}>
         <div className="container py-5">
@@ -359,7 +403,7 @@ const App = () => {
               </div>
             </div>
 
-            {/* 3. Robson Pinturas (NOVO - ESTILO LEGADO) */}
+            {/* 3. Robson Pinturas */}
             <div className="col-md-6 col-lg-4">
               <div className="glass-card d-flex flex-column">
                 <div className="d-flex justify-content-between align-items-start mb-4">
@@ -395,7 +439,7 @@ const App = () => {
                 <button type="submit" className="btn-goth w-100 py-3" disabled={formStatus !== 'idle'}>
                   {formStatus === 'sending' ? t.contact.sending : <>{t.contact.btn} <Send size={16} /></>}
                 </button>
-                {formStatus === 'success' && <div className="text-success mt-3 font-code">{t.contact.success}</div>}
+                {formStatus === 'success' && <div className="text-success mt-3 font-code text-center">{t.contact.success}</div>}
               </form>
             </div>
           </div>
