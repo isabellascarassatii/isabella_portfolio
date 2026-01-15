@@ -1,16 +1,35 @@
-# React + Vite
+# 🔮 Portfólio Pessoal | Isabella Dos Anjos
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
+![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
 
-Currently, two official plugins are available:
+## 💻 Sobre o Projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Este é o meu portfólio profissional, desenvolvido para centralizar meus projetos, experiências e habilidades como desenvolvedora. 
 
-## React Compiler
+O objetivo principal deste projeto foi criar uma interface moderna, responsiva e performática, aplicando na prática meus estudos de Front-end enquanto consolido minha base técnica em Back-end.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+O projeto conta com **CI/CD** configurado via GitHub Actions e Vercel, garantindo deploy automático a cada nova atualização na branch main.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Tecnologias Utilizadas
+
+O projeto foi desenvolvido utilizando as seguintes tecnologias:
+
+- **[React.js](https://reactjs.org/)**: Biblioteca JavaScript para construção da interface.
+- **[Vite](https://vitejs.dev/)**: Ferramenta de build para garantir alta performance e carregamento rápido.
+- **[EmailJS](https://www.emailjs.com/)**: Integração para envio de formulários de contato diretamente para o e-mail, sem necessidade de back-end complexo.
+- **[CSS Modules/Styled Components]**: Estilização responsiva e moderna. *(Ajuste aqui se usou Tailwind ou CSS puro)*
+- **[Vercel](https://vercel.com/)**: Hospedagem e Deploy contínuo.
+
+---
+
+## ⚙️ Funcionalidades
+
+- [x] Apresentação pessoal e profissional ("Sobre Mim").
+- [x] Vitrine de Projetos com links para repositórios e demos.
+- [x] Formulário de Contato funcional.
+- [x] Design Responsivo (Mobile First).
