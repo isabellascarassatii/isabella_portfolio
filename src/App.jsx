@@ -389,7 +389,7 @@ const App = () => {
         <div className="container d-flex justify-content-between align-items-center">
           <div className="d-flex align-items-center gap-2">
             <span className="font-display fw-bold" style={{fontSize: '1.4rem', letterSpacing: '0.5px'}}>
-              Isabella Anjos<span className="text-accent">.</span>
+              Isabella Dev<span className="text-accent">.</span>
             </span>
           </div>
           
