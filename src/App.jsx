@@ -96,15 +96,30 @@ const content = {
       btnCode: 'View Code',
       btnLive: 'Live Demo',
       btnLegacy: 'Completed Project (2024)',
+      
+      // CORREÇÃO: Adicionadas as descrições e tecnologias em Inglês para não quebrar o map()
       p1_title: 'Belle Time - Studio System',
+      p1_desc: 'Complete management system for beauty salons. Manages scheduling and client base with strict data integrity.',
+      p1_tech: ['Python', 'MySQL', 'PySide6', 'VirtualBox'],
+      p1_repo: 'https://github.com/isabelladosanjos/BelleTime_Agenda',
+
       p2_title: 'Symphony IA - Music Agent',
+      p2_desc: 'Intelligent agent that recommends personalized music playlists using the Groq API.',
+      p2_tech: ['Python', 'Groq API', 'Streamlit', 'LLM Engineering'],
+      p2_repo: 'https://github.com/isabelladosanjos/SymphonyIA_ProjetoADS',
+      p2_live: 'https://symphonyiaprojetoads-5dfiru6tjoubjst8kvsabn.streamlit.app/',
+
       p3_title: 'Robson Pinturas - Digital Presence',
+      p3_desc: 'Technical leadership in developing a mobile-first platform with WhatsApp integration and Google OAuth.',
+      p3_tech: ['JavaScript', 'Bootstrap', 'WhatsApp API', 'OAuth 2.0'],
     },
     contact: {
       title: 'Let\'s build something amazing?',
+      desc: 'Fill out the form below. The message will go directly to my professional email.',
       btn: 'Send Message',
       sending: 'Sending...',
       success: 'Message sent successfully!',
+      error: 'Error sending message.',
       placeholderName: 'Your Name',
       placeholderEmail: 'Your Email',
       placeholderMsg: 'Your Message'
@@ -180,7 +195,11 @@ const App = () => {
           <span className="font-display fw-bold" style={{fontSize: '1.4rem'}}>Isabella Dev<span className="text-accent">.</span></span>
           <div className="d-flex align-items-center gap-4">
             <button onClick={toggleTheme} className="btn p-0 border-0 text-accent">{theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}</button>
-            <button onClick={toggleLang} className="btn p-0 border-0 d-flex align-items-center gap-2" style={{color: 'var(--text-main)'}}><Globe size={18} /> <span className="font-code small">{lang.toUpperCase()}</span></button>
+            <button onClick={toggleLang} className="btn p-0 border-0 d-flex align-items-center gap-2" style={{color: 'var(--text-main)'}}>
+              <Globe size={18} /> 
+              <span className="font-code small">{lang === 'pt' ? 'EN' : 'PT'}</span>
+            </button>
+            
           </div>
         </div>
       </nav>
@@ -197,7 +216,6 @@ const App = () => {
         </div>
       </section>
 
-      {/* SEÇÃO REINSERIDA AQUI */}
       <section id="about" className="py-5">
         <div className="container py-5">
           <div className="row g-5">
@@ -235,7 +253,7 @@ const App = () => {
                 <h3 className="h4 mb-3">{t.projects.p1_title}</h3>
                 <p className="text-muted-custom mb-4 small flex-grow-1">{t.projects.p1_desc}</p>
                 <div className="mb-4">{t.projects.p1_tech.map(tech => <span key={tech} className="skill-badge">{tech}</span>)}</div>
-                <a href={t.projects.p1_repo} target="_blank" rel="noreferrer" className="btn-goth w-100 text-center"><Github size={16} /> Ver Código</a>
+                <a href={t.projects.p1_repo} target="_blank" rel="noreferrer" className="btn-goth w-100 text-center"><Github size={16} /> {t.projects.btnCode}</a>
               </div>
             </div>
             <div className="col-md-6 col-lg-4">
@@ -246,7 +264,7 @@ const App = () => {
                 <div className="mb-4">{t.projects.p2_tech.map(tech => <span key={tech} className="skill-badge">{tech}</span>)}</div>
                 <div className="d-flex gap-2">
                   <a href={t.projects.p2_repo} target="_blank" rel="noreferrer" className="btn-goth flex-grow-1 text-center"><Github size={16} /></a>
-                  <a href={t.projects.p2_live} target="_blank" rel="noreferrer" className="btn-goth flex-grow-1 text-center" style={{background: 'var(--accent)', color: '#fff'}}>Live</a>
+                  <a href={t.projects.p2_live} target="_blank" rel="noreferrer" className="btn-goth flex-grow-1 text-center" style={{background: 'var(--accent)', color: '#fff'}}>{t.projects.btnLive}</a>
                 </div>
               </div>
             </div>
@@ -275,7 +293,7 @@ const App = () => {
                 <button type="submit" className="btn-goth w-100 py-3" disabled={formStatus !== 'idle'}>
                   {formStatus === 'sending' ? t.contact.sending : <>{t.contact.btn} <Send size={16} /></>}
                 </button>
-                {formStatus === 'success' && <div className="text-success mt-3 font-code text-center">Enviado com sucesso!</div>}
+                {formStatus === 'success' && <div className="text-success mt-3 font-code text-center">{t.contact.success}</div>}
               </form>
             </div>
           </div>
