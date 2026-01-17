@@ -5,7 +5,8 @@ import {
   Github, Linkedin, Mail, Globe, Moon, Sun, 
   MapPin, ExternalLink, Music, Sparkles, 
   ArrowRight, Box, ShieldCheck, Workflow, CheckCircle, 
-  Send, AlertCircle, Users, Brain, Clock, Layers
+  Send, AlertCircle, Users, Brain, Clock, Layers,
+  FileText // Importei o ícone novo para o currículo
 } from 'lucide-react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -17,7 +18,8 @@ const content = {
       subtitle: 'Desenvolvedora apaixonada por arquitetura de software, automação e inteligência artificial. Transformo regras de negócio complexas em sistemas elegantes e escaláveis.',
       location: 'Sorocaba, SP',
       btnProject: 'Ver Portfolio',
-      btnContact: 'Entrar em Contato'
+      btnContact: 'Entrar em Contato',
+      btnCV: 'Baixar CV' // Novo texto
     },
     about: {
       title: 'A Arquiteta por trás do Código',
@@ -74,7 +76,8 @@ const content = {
       subtitle: 'Developer passionate about software architecture, automation, and artificial intelligence.',
       location: 'Sorocaba, Brazil',
       btnProject: 'View Portfolio',
-      btnContact: 'Get in Touch'
+      btnContact: 'Get in Touch',
+      btnCV: 'Download CV' // Novo texto EN
     },
     about: {
       title: 'The Architect Behind the Code',
@@ -96,19 +99,15 @@ const content = {
       btnCode: 'View Code',
       btnLive: 'Live Demo',
       btnLegacy: 'Completed Project (2024)',
-      
-      // CORREÇÃO: Adicionadas as descrições e tecnologias em Inglês para não quebrar o map()
       p1_title: 'Belle Time - Studio System',
       p1_desc: 'Complete management system for beauty salons. Manages scheduling and client base with strict data integrity.',
       p1_tech: ['Python', 'MySQL', 'PySide6', 'VirtualBox'],
       p1_repo: 'https://github.com/isabelladosanjos/BelleTime_Agenda',
-
       p2_title: 'Symphony IA - Music Agent',
       p2_desc: 'Intelligent agent that recommends personalized music playlists using the Groq API.',
       p2_tech: ['Python', 'Groq API', 'Streamlit', 'LLM Engineering'],
       p2_repo: 'https://github.com/isabelladosanjos/SymphonyIA_ProjetoADS',
       p2_live: 'https://symphonyiaprojetoads-5dfiru6tjoubjst8kvsabn.streamlit.app/',
-
       p3_title: 'Robson Pinturas - Digital Presence',
       p3_desc: 'Technical leadership in developing a mobile-first platform with WhatsApp integration and Google OAuth.',
       p3_tech: ['JavaScript', 'Bootstrap', 'WhatsApp API', 'OAuth 2.0'],
@@ -174,12 +173,37 @@ const App = () => {
       --text-muted: #665a5d; --accent: #800020; --border: #e6dadd;
     }
     body { background-color: var(--bg-body) !important; color: var(--text-main) !important; font-family: var(--font-body); transition: all 0.3s; }
-    .btn-goth { border: 1px solid var(--accent); color: var(--text-main); padding: 10px 24px; background: transparent; font-family: var(--font-code); text-decoration: none; cursor: pointer; transition: 0.3s; }
-    .btn-goth:hover { background: var(--accent); color: #fff !important; }
+    
+    .btn-goth { border: 1px solid var(--accent); color: var(--text-main); padding: 10px 24px; background: transparent; font-family: var(--font-code); text-decoration: none; cursor: pointer; transition: 0.3s; display: inline-flex; align-items: center; justify-content: center; gap: 8px; }
+    .btn-goth:hover { background: var(--accent); color: #fff !important; box-shadow: 0 0 15px rgba(155, 34, 66, 0.4); }
+    
     .glass-card { background: var(--bg-card); border: 1px solid var(--border); padding: 2rem; border-radius: 4px; height: 100%; transition: 0.3s; }
     .glass-card:hover { transform: translateY(-5px); border-color: var(--accent); }
+    
     .nav-blur { background: rgba(20, 10, 15, 0.7); backdrop-filter: blur(15px); border-bottom: 1px solid var(--border); }
-    .skill-badge { font-family: var(--font-code); font-size: 0.85rem; padding: 6px 12px; background: rgba(128, 128, 128, 0.1); border: 1px solid var(--border); color: var(--text-muted); margin: 0 5px 5px 0; display: inline-block; }
+    
+    /* ESTILO NOVO DAS SKILLS */
+    .skill-badge { 
+      font-family: var(--font-code); 
+      font-size: 0.85rem; 
+      padding: 6px 12px; 
+      background: rgba(128, 128, 128, 0.1); 
+      border: 1px solid var(--border); 
+      color: var(--text-muted); 
+      margin: 0 5px 5px 0; 
+      display: inline-block;
+      transition: all 0.3s ease;
+      cursor: default;
+    }
+    /* Efeito de hover "vivido" */
+    .skill-badge:hover {
+      background-color: var(--accent);
+      color: #fff !important;
+      border-color: var(--accent);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(155, 34, 66, 0.3);
+    }
+
     .skill-category { border-left: 2px solid var(--border); padding-left: 1.5rem; margin-bottom: 2rem; }
     .text-accent { color: var(--accent) !important; }
     .text-muted-custom { color: var(--text-muted) !important; }
@@ -199,7 +223,6 @@ const App = () => {
               <Globe size={18} /> 
               <span className="font-code small">{lang === 'pt' ? 'EN' : 'PT'}</span>
             </button>
-            
           </div>
         </div>
       </nav>
@@ -209,10 +232,20 @@ const App = () => {
           <div className="d-inline-block px-3 py-1 mb-4 border border-secondary rounded-pill font-code text-accent small">{t.hero.role}</div>
           <h1 className="display-1 mb-4" style={{fontFamily: 'var(--font-display)'}}>{t.hero.title}</h1>
           <p className="lead text-muted-custom mb-5" style={{maxWidth: '650px'}}>{t.hero.subtitle}</p>
+          
           <div className="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
             <a href="#projects" className="btn-goth">{t.hero.btnProject}</a>
-            <div className="d-flex align-items-center gap-2 text-muted-custom font-code small"><MapPin size={16} className="text-accent" /> {t.hero.location}</div>
+            
+            {/* NOVO BOTÃO DE DOWNLOAD DO CV */}
+            {/* O atributo 'download' faz o navegador baixar o arquivo em vez de abrir */}
+            <a href="/Curriculo_IsabellaDosAnjos.pdf" download="Currículo_Isabella_Dos_Anjos.pdf" className="btn-goth d-flex align-items-center gap-2" style={{borderColor: 'var(--text-muted)'}}>
+              <FileText size={18} /> {t.hero.btnCV}
+            </a>
+            
           </div>
+            <div className="mt-4 d-flex align-items-center gap-2 text-muted-custom font-code small justify-content-center justify-content-lg-start">
+                <MapPin size={16} className="text-accent" /> {t.hero.location}
+            </div>
         </div>
       </section>
 
