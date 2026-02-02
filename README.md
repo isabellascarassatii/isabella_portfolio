@@ -33,3 +33,4 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 - [x] Vitrine de Projetos com links para repositórios e demos.
 - [x] Formulário de Contato funcional.
 - [x] Design Responsivo (Mobile First).
+- [x] Currículo presente no site.
